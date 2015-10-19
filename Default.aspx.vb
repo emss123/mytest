@@ -21,6 +21,8 @@ Partial Class _Default
             strCmd.CommandText = pstrSQL
             strCmd.ExecuteNonQuery()
             strSQLConn.Close()
+
+Label1.Text = pstrSQL 
        
     End Sub
     Public Function GetDataTable(ByVal pstrSQL As String) As DataTable
