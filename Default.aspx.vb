@@ -18,7 +18,6 @@ Partial Class _Default
             Connect()
             strSQLConn.Open()
             strCmd = New SqlCommand(pstrSQL, strSQLConn)
-            strCmd.CommandText = pstrSQL
             strCmd.ExecuteNonQuery()
             strSQLConn.Close()
 
