@@ -11,22 +11,20 @@ Partial Class _Default
     Dim dt As DataTable
 
     Public Sub Connect()
-        strSQLConn = New SqlConnection("Server=DVELOPER1225;Database=test;User ID=sa;Password=ssmits;")
+        strSQLConn = New SqlConnection("Server=e999680e-694b-4afe-8465-a53600d2b292.sqlserver.sequelizer.com;Database=dbe999680e694b4afe8465a53600d2b292;User ID=ilquyjjkyafakuae;Password=P6ntqkUCKCUj8AaB8e42UDNpcRKgYUwC2cdbuYeiNinDJoAEaSbt4hyjq7rFHNMX;")
     End Sub
     Public Sub ExecuteSQL(ByVal pstrSQL As String)
-        Try
+        
             Connect()
             strSQLConn.Open()
             strCmd = New SqlCommand(pstrSQL, strSQLConn)
             strCmd.CommandText = pstrSQL
             strCmd.ExecuteNonQuery()
             strSQLConn.Close()
-        Catch ex As Exception
-
-        End Try
+       
     End Sub
     Public Function GetDataTable(ByVal pstrSQL As String) As DataTable
-        Try
+       
             Connect()
             strSQLConn.Open()
             dt = New DataTable()
@@ -35,9 +33,7 @@ Partial Class _Default
             strDataAdapter.Fill(dt)
             strSQLConn.Close()
             Return dt
-        Catch ex As Exception
-            Return Nothing
-        End Try
+       
     End Function
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
