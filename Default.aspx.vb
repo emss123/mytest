@@ -40,7 +40,7 @@ Label1.Text = pstrSQL
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        ExecuteSQL("insert into tbl_stud (name,age,email,pass) values('" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "'")
+        ExecuteSQL("insert into tbl_stud (name,age,email,pass) values('" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "')")
         Label1.Text = "Insert Successfully"
 
         disp()
