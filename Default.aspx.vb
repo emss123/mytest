@@ -15,13 +15,14 @@ Partial Class _Default
     End Sub
     Public Sub ExecuteSQL(ByVal pstrSQL As String)
         
+Label1.Text = pstrSQL
             Connect()
             strSQLConn.Open()
             strCmd = New SqlCommand(pstrSQL, strSQLConn)
             strCmd.ExecuteNonQuery()
             strSQLConn.Close()
 
-Label1.Text = pstrSQL 
+ 
        
     End Sub
     Public Function GetDataTable(ByVal pstrSQL As String) As DataTable
